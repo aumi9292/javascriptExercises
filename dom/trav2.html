@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Go Back or Continue</title>
+  </head>
+
+  <body>
+    <p>
+      You can <a href="?page=2">go back</a> or <a href="/page/3">continue</a>.
+    </p>
+  </body>
+</html>
+
+let capstoneArticles = [...document.querySelectorAll('article')].filter(art => art.getAttribute('data-content').includes('Capstone presentation'));
+
+capstoneArticles.map(article => article.querySelector('div.event-time-and-description').querySelector('div.event-description'))
+
+Object.getOwnPropertyNames(Node.prototype).forEach(prop => console.log(prop));
+
+// all 
+console.log(document.querySelector('div #main-content').childNodes[1].textContent);
+
+let capstoneArticles = [...document.querySelector('div #main-content').querySelectorAll('article')].filter(article => article.getAttribute('data-content').includes('Capstone presentation'));
+
+let capstoneArticles = [...document.querySelector('div #main-content').querySelectorAll('article')].filter(article => /Capstone (presentation)|(Project Presentation)/.test(article.getAttribute('data-content'))).map(article => article.textContent);

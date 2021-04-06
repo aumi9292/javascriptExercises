@@ -1,0 +1,9 @@
+<script>
+  let request = new XMLHttpRequest();
+  request.open('GET', 'https://api.github.com/repos/rails/rails');
+  request.send();
+  request.addEventListener('load', event => {
+    console.log(event);
+    console.log(typeof JSON.stringify(request.response))
+  })
+</script>

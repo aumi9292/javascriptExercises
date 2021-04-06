@@ -1,0 +1,35 @@
+<form id="form">
+  <p><label>Title: <input type="text" name="title"></label></p>
+  <p><label>Author: <input type="text" name="author"></label></p>
+  <p><button type="submit">Submit</button></p>
+</form>
+
+<script>
+  let form = document.getElementById('form');
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    // let keysAndValues = [];
+    // for (let idx = 0; idx < form.elements.length; idx++) {
+    //   let element = form.elements[idx];
+    //   let key; 
+    //   let value;
+
+    //   if (element.type !== 'submit') {
+    //     key = encodeURIComponent(element.name);
+    //     value = encodeURIComponent(element.value);
+    //     keysAndValues.push(`${key}=${value}`);
+    //   }
+    // }
+    // let data = keysAndValues.join('&');
+
+    let data = new FormData(form)
+
+    let request = new XMLHttpRequest();
+    request.open('POST', 'https://ls-230-book-catalog.herokuapp.com/books');
+    //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+    request.addEventListener('load', event => {
+      console.log(`${request.response} has been added`);
+    })
+    request.send(data)
+  })
+</script>

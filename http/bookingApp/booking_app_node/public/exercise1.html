@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Exercise 2</title>
+    <meta charset='utf-8' />
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div id='answer'></div>
+    <div id='load-status'></div>
+    <script>
+
+      function tallyTotal(list) {
+        let totals = {};
+        list.forEach(schedule => {
+          let staff = `Staff ${schedule["staff_id"]}`;
+          if (!totals[staff]) {
+            totals[staff] = 1;
+          } else {
+            totals[staff] += 1;
+          }
+        })
+        console.log(totals);
+      }
+      function getAllSchedules(fetchPromise) {
+        return new Promise((resolve, reject) => {
+          const timeoutId = setTimeout(() => {
+            reject(new Error("Server timed out, please try again"))
+          }, 5000);
+          fetchPromise.then(
+            (response) => {
+            clearTimeout(timeoutId);
+            resolve(response);
+          }).catch( 
+          (err) => {
+            clearTimeout(timeoutId);
+            reject(err);
+          });
+        })
+      }
+
+      getAllSchedules(fetch("http://localhost:3000/api/schedules"))
+        .then(response => response.json())
+        .then(list => tallyTotal(list))
+        .catch(err => console.log(err))
+        .finally(console.log("This request has been handled"))
+
+      // create a new object
+      // iterate over the array of objects
+      // for each object, insert a k-v pair of "staff ${staff_id}: 1" into the object if that k does not exist in the object, otherwise increment the count += 1
+      //set a timeout on the fetch request, with a chained catch block that tells the user to try the request again
+      // add a chained finally invocation that displays success or failure/timeout of the request
+    </script>
+  </body>
+</html>

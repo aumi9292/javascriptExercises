@@ -1,0 +1,39 @@
+<form>
+  <fieldset>
+    <label for="name">Enter a name:</label>
+    <input name="name" type="text">
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const URL = "https://api.agify.io";
+    let form = document.querySelector("form")
+
+
+    form.addEventListener("submit", event => {
+      let encoded = `?name=${form.querySelector('input').value}`;
+      let display = document.createElement("P");
+      event.preventDefault();
+      console.log(URL + encoded)
+
+      fetch(URL + encoded).then((response) => response.json()).then((response) => {
+        display.textContent = `Name: ${response['name']} Average Age: ${response.age}`;
+        document.body.appendChild(display)
+      })
+
+      // let xhr = new XMLHttpRequest();
+      // xhr.open("GET", URL + encoded)
+      // xhr.responseType = "json";
+      // xhr.addEventListener("load", (event) => {
+      // display.textContent = `Name: ${xhr.response['name']} Average Age: ${xhr.response.age}`
+      // document.body.appendChild(display)
+    // });
+
+    //xhr.send();
+    })
+
+    
+  })
+  
+</script>

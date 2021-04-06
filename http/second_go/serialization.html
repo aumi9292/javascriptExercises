@@ -1,0 +1,17 @@
+<script>
+  let book = {
+  "title": "Do Androids Dream of Electric Sheep?",
+  "year": 1968
+};
+
+let encoded = [];
+for (stat in book) {
+  let pair = [];
+  pair.push(encodeURIComponent(stat), encodeURIComponent(book[stat]));
+  encoded.push(pair.join('='));
+}
+
+let encodedStr = encoded.join('&')
+console.log(encodedStr)
+
+</script>

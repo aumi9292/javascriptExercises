@@ -1,0 +1,325 @@
+conversion.js:1 Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+nr-1198.min.js:1 Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+let capstoneArticles = [...document.querySelector('div #main-content').querySelectorAll('article')].filter(article => /Capstone (presentation)|(Project Presentation)/.test(article.getAttribute('data-content'))).map(article => article.textContent);
+undefined
+capstoneArticles
+(14) ["↵↵ 4↵Jan↵2021↵↵↵↵Capstone presentation: Haven↵Pres… security.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵ 3↵Jan↵2021↵↵↵↵Capstone presentation: Satellite↵…admin GUI.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵20↵Dec↵2020↵↵↵↵Capstone presentation: Stagehand↵…lications.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵14↵Dec↵2020↵↵↵↵Capstone presentation: Campion↵Pr… location.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵ 7↵Sep↵2020↵↵↵↵Capstone presentation: River↵Pres…real-time.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵ 3↵Sep↵2020↵↵↵↵Capstone presentation: Jade↵Prese…lications.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵ 1↵Sep↵2020↵↵↵↵Capstone presentation: Maestro↵Pr… workflow.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵25↵Apr↵2020↵↵↵↵Capstone Project Presentation: Ve…rocessing.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵24↵Apr↵2020↵↵↵↵Capstone Project Presentation: Ba…n support.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵24↵Apr↵2020↵↵↵↵Capstone Project Presentation: Ap…ata store.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵23↵Apr↵2020↵↵↵↵Capstone Project Presentation: Be…o minutes.↵↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵ 8↵Jan↵2020↵↵↵↵Capstone Project Presentation: Mo… Mothership↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵ 8↵Jan↵2020↵↵↵↵Capstone Project Presentation: Re…ut RedPoint↵↵↵Watch the video recording here↵↵↵↵↵", "↵↵14↵Dec↵2018↵↵↵↵Capstone Project Presentation: Sp… SpaceCraft↵↵↵Watch the video recording here↵↵↵↵↵"]0: "↵↵ 4↵Jan↵2021↵↵↵↵Capstone presentation: Haven↵Presented by Adam Isom, Aram Podolski, Daniel Marino, Rebecca Nguyen↵↵Haven is an open-source, centralized secrets manager. It protects your application secrets through a combination of encryption, access control, and injection-at-runtime. It’s easy to set up, and offers an intuitive GUI to set fine-grained access controls and to view logs. Haven allows small teams to securely manage all of their projects’ secrets---and to do so with a minimum of hassle so that they can get back to developing their applications without sacrificing security.↵↵↵↵Watch the video recording here↵↵↵↵↵"1: "↵↵ 3↵Jan↵2021↵↵↵↵Capstone presentation: Satellite↵Presented by Ilyas Kussainov, Jordan Moore, Lewis Reynolds, William Baker↵↵Satellite is an open-source GraphQL Backend-as-a-Service that makes it easy to get a GraphQL API up and running to power the frontend of your dynamic web application. It abstracts away all of the complexity of creating a GraphQL backend so that you can deploy your application faster. Once deployed, Satellite leverages Kubernetes as a container orchestrator to allow you to host as many GraphQL backends as you need, configurable through a straight-forward admin GUI.↵↵↵↵Watch the video recording here↵↵↵↵↵"2: "↵↵20↵Dec↵2020↵↵↵↵Capstone presentation: Stagehand↵Presented by Cody Stair, Daniel Lew, Emil Reji↵↵Stagehand is a drop-in cloud solution that provides review apps for modern frontend applications. It works with any frontend application that can be served from a CDN. Stagehand automatically deploys and manages review apps for your application’s GitHub repository on your own cloud infrastructure. Each review app has a dashboard wrapper and an intuitive CLI is provided to manage your current Stagehand applications.↵↵↵↵Watch the video recording here↵↵↵↵↵"3: "↵↵14↵Dec↵2020↵↵↵↵Capstone presentation: Campion↵Presented by Arthur Kauffman, Ben Zelinski, Gabriel De Almeida↵↵Campion is a drop-in circuit breaker framework deployed on the edge. It provides ready-to-scale protection of synchronous calls to external endpoints and distributed services. It's lean, language-agnostic, and sets up quickly. Campion offers customizable circuit breaking parameters, traffic and error logging, and an intuitive CLI/GUI to view metrics and service health in one central location.↵↵↵↵Watch the video recording here↵↵↵↵↵"4: "↵↵ 7↵Sep↵2020↵↵↵↵Capstone presentation: River↵Presented by Catherine Emond and Mark Hyams↵↵River is a drop-in real-time service for web applications. It provides an easy-to-deploy and ready-to-scale solution to your real-time needs. It's meant to be easy to use: a few commands and you're all set up. It's a great fit for existing applications looking for a way to add real-time functionality without the hassle of deploying your own infrastructure. River will allow you to easily publish events from your backend APIs and make them available to web clients in real-time.↵↵↵↵Watch the video recording here↵↵↵↵↵"5: "↵↵ 3↵Sep↵2020↵↵↵↵Capstone presentation: Jade↵Presented by Edmond Tam, Krunal Patel, and Jeremy Crichton↵↵Jade is a framework that makes it simple to deploy and maintain JAMstack applications. The JAMstack is a web development architecture that utilizes modern tools and practices to make web apps fast, secure and highly scalable. Jade abstracts away the time and complexity of provisioning services and writing backend code related to the underlying infrastructure so developers can focus on building their applications.↵↵↵↵Watch the video recording here↵↵↵↵↵"6: "↵↵ 1↵Sep↵2020↵↵↵↵Capstone presentation: Maestro↵Presented by John Isom, Torrel Moseley, and Zac Klammer↵↵Maestro is a framework that enables rapid iteration for serverless orchestration. The rise of serverless architectures and FaaS offerings such as AWS Lambda has revolutionized how companies are developing modern apps. The need for an orchestration layer over these architectures has brought about services such as AWS Step Functions. However, deploying apps that use Step Functions can be tedious and error-prone. Maestro prioritizes speed and developer productivity by automating this process so that the developer’s focus stays on their workflow.↵↵↵↵Watch the video recording here↵↵↵↵↵"7: "↵↵25↵Apr↵2020↵↵↵↵Capstone Project Presentation: Venice↵Presented by David Perich, Nancy Trinh, and Melissa Manousos↵↵Venice is an open-source framework for rapidly deploying and easily managing event stream processing pipelines for event-driven applications. Venice allows developers to focus on their application logic instead of their infrastructure. With a default pipeline, an intuitive command-line interface, and a web UI, Venice simplifies deployment and management for developers new to stream processing.↵↵↵↵Watch the video recording here↵↵↵↵↵"8: "↵↵24↵Apr↵2020↵↵↵↵Capstone Project Presentation: Backpack↵Presented by Holden Hinkle, Ido Moskovich, and Liela Rotschy↵↵Backpack is a portable backend for your web apps that provides the essential features of data persistence, user authentication, file storage, realtime communication, and frontend hosting without the complexities of managing & configuring servers to support each of those services. Grab a server (or a fleet of servers!), grab Docker, install Backpack, and host as many backends as your hardware can support.↵↵↵↵Watch the video recording here↵↵↵↵↵"9: "↵↵24↵Apr↵2020↵↵↵↵Capstone Project Presentation: Apex ↵Presented by Derick Gross and Kelvin Wong↵↵Apex is an API proxy that sits on the path of network traffic between microservices. It provides one place to monitor and control service-to-service traffic. It’s designed for teams that have just started breaking up their monoliths into several microservices, but are now having to spend a lot more time diagnosing network-related faults, and managing the corresponding fault-handling logic (e.g. retrying failed requests without overwhelming the responding service). With Apex, teams can query the logs for all requests and responses in one database table, and define and update all retry logic in the same configuration data store.↵↵↵↵Watch the video recording here↵↵↵↵↵"10: "↵↵23↵Apr↵2020↵↵↵↵Capstone Project Presentation: Bento↵Presented by Max Hawkins, Mike del Rio, and Nathan Classen↵↵Bento is a blazing-fast serverless video transcoder. Converting high-definition videos to new formats and resolutions is a process that typically takes hours. By leveraging the instant scale and concurrent execution of function-as-a-service architecture, Bento transcodes hundreds of small parts of a video file in parallel, slashing multi-hour transcoding jobs down to minutes.↵↵↵↵Watch the video recording here↵↵↵↵↵"11: "↵↵ 8↵Jan↵2020↵↵↵↵Capstone Project Presentation: Mothership↵Presented by Ian Evans, Jon Kulton, and Bharat Agarwal↵↵Mothership is an open-source, Heroku-like, platform as a service. With Mothership, teams can easily deploy and manage a fleet of small applications. Because it is open-source, engineering teams are empowered to host Mothership wherever they choose. At the same time, an intuitive command line interface makes setting up your own Mothership as simple as typing mothership setup.↵↵↵↵Read more information about Mothership↵↵↵Watch the video recording here↵↵↵↵↵"12: "↵↵ 8↵Jan↵2020↵↵↵↵Capstone Project Presentation: RedPoint↵Presented by Ben Harvey, William Robert Mills, and Charles Ging↵↵RedPoint is a web-native computational notebook that is optimized for student programmers. Computational notebooks are cell-based programming environments that allow the mixing of styled text cells with runnable code cells. RedPoint notebooks can execute Javascript, Ruby and Python code simultaneously, displaying output, return values and errors. RedPoint can also interact with APIs and webhooks, receiving JSON data directly into a notebook.↵↵↵↵Read more information about RedPoint↵↵↵Watch the video recording here↵↵↵↵↵"13: "↵↵14↵Dec↵2018↵↵↵↵Capstone Project Presentation: SpaceCraft ↵Presented by Ying Chyi Gooi, Nick Johnson, and Julius Zerwick↵↵SpaceCraft is an open-source, real-time, collaborative REPL (Read-Eval-Print-Loop) that allows users to write and execute code in the browser for Ruby, JavaScript, and Python.↵↵↵↵Read more information about SpaceCraft↵↵↵Watch the video recording here↵↵↵↵↵"length: 14__proto__: Array(0)
+capstoneArticles.textContent
+undefined
+capstoneArticles.join("\n\n")
+"
+
+ 4
+Jan
+2021
+
+
+
+Capstone presentation: Haven
+Presented by Adam Isom, Aram Podolski, Daniel Marino, Rebecca Nguyen
+
+Haven is an open-source, centralized secrets manager. It protects your application secrets through a combination of encryption, access control, and injection-at-runtime. It’s easy to set up, and offers an intuitive GUI to set fine-grained access controls and to view logs. Haven allows small teams to securely manage all of their projects’ secrets---and to do so with a minimum of hassle so that they can get back to developing their applications without sacrificing security.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+ 3
+Jan
+2021
+
+
+
+Capstone presentation: Satellite
+Presented by Ilyas Kussainov, Jordan Moore, Lewis Reynolds, William Baker
+
+Satellite is an open-source GraphQL Backend-as-a-Service that makes it easy to get a GraphQL API up and running to power the frontend of your dynamic web application. It abstracts away all of the complexity of creating a GraphQL backend so that you can deploy your application faster. Once deployed, Satellite leverages Kubernetes as a container orchestrator to allow you to host as many GraphQL backends as you need, configurable through a straight-forward admin GUI.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+20
+Dec
+2020
+
+
+
+Capstone presentation: Stagehand
+Presented by Cody Stair, Daniel Lew, Emil Reji
+
+Stagehand is a drop-in cloud solution that provides review apps for modern frontend applications. It works with any frontend application that can be served from a CDN. Stagehand automatically deploys and manages review apps for your application’s GitHub repository on your own cloud infrastructure. Each review app has a dashboard wrapper and an intuitive CLI is provided to manage your current Stagehand applications.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+14
+Dec
+2020
+
+
+
+Capstone presentation: Campion
+Presented by Arthur Kauffman, Ben Zelinski, Gabriel De Almeida
+
+Campion is a drop-in circuit breaker framework deployed on the edge. It provides ready-to-scale protection of synchronous calls to external endpoints and distributed services. It's lean, language-agnostic, and sets up quickly. Campion offers customizable circuit breaking parameters, traffic and error logging, and an intuitive CLI/GUI to view metrics and service health in one central location.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+ 7
+Sep
+2020
+
+
+
+Capstone presentation: River
+Presented by Catherine Emond and Mark Hyams
+
+River is a drop-in real-time service for web applications. It provides an easy-to-deploy and ready-to-scale solution to your real-time needs. It's meant to be easy to use: a few commands and you're all set up. It's a great fit for existing applications looking for a way to add real-time functionality without the hassle of deploying your own infrastructure. River will allow you to easily publish events from your backend APIs and make them available to web clients in real-time.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+ 3
+Sep
+2020
+
+
+
+Capstone presentation: Jade
+Presented by Edmond Tam, Krunal Patel, and Jeremy Crichton
+
+Jade is a framework that makes it simple to deploy and maintain JAMstack applications. The JAMstack is a web development architecture that utilizes modern tools and practices to make web apps fast, secure and highly scalable. Jade abstracts away the time and complexity of provisioning services and writing backend code related to the underlying infrastructure so developers can focus on building their applications.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+ 1
+Sep
+2020
+
+
+
+Capstone presentation: Maestro
+Presented by John Isom, Torrel Moseley, and Zac Klammer
+
+Maestro is a framework that enables rapid iteration for serverless orchestration. The rise of serverless architectures and FaaS offerings such as AWS Lambda has revolutionized how companies are developing modern apps. The need for an orchestration layer over these architectures has brought about services such as AWS Step Functions. However, deploying apps that use Step Functions can be tedious and error-prone. Maestro prioritizes speed and developer productivity by automating this process so that the developer’s focus stays on their workflow.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+25
+Apr
+2020
+
+
+
+Capstone Project Presentation: Venice
+Presented by David Perich, Nancy Trinh, and Melissa Manousos
+
+Venice is an open-source framework for rapidly deploying and easily managing event stream processing pipelines for event-driven applications. Venice allows developers to focus on their application logic instead of their infrastructure. With a default pipeline, an intuitive command-line interface, and a web UI, Venice simplifies deployment and management for developers new to stream processing.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+24
+Apr
+2020
+
+
+
+Capstone Project Presentation: Backpack
+Presented by Holden Hinkle, Ido Moskovich, and Liela Rotschy
+
+Backpack is a portable backend for your web apps that provides the essential features of data persistence, user authentication, file storage, realtime communication, and frontend hosting without the complexities of managing & configuring servers to support each of those services. Grab a server (or a fleet of servers!), grab Docker, install Backpack, and host as many backends as your hardware can support.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+24
+Apr
+2020
+
+
+
+Capstone Project Presentation: Apex 
+Presented by Derick Gross and Kelvin Wong
+
+Apex is an API proxy that sits on the path of network traffic between microservices. It provides one place to monitor and control service-to-service traffic. It’s designed for teams that have just started breaking up their monoliths into several microservices, but are now having to spend a lot more time diagnosing network-related faults, and managing the corresponding fault-handling logic (e.g. retrying failed requests without overwhelming the responding service). With Apex, teams can query the logs for all requests and responses in one database table, and define and update all retry logic in the same configuration data store.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+23
+Apr
+2020
+
+
+
+Capstone Project Presentation: Bento
+Presented by Max Hawkins, Mike del Rio, and Nathan Classen
+
+Bento is a blazing-fast serverless video transcoder. Converting high-definition videos to new formats and resolutions is a process that typically takes hours. By leveraging the instant scale and concurrent execution of function-as-a-service architecture, Bento transcodes hundreds of small parts of a video file in parallel, slashing multi-hour transcoding jobs down to minutes.
+
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+ 8
+Jan
+2020
+
+
+
+Capstone Project Presentation: Mothership
+Presented by Ian Evans, Jon Kulton, and Bharat Agarwal
+
+Mothership is an open-source, Heroku-like, platform as a service. With Mothership, teams can easily deploy and manage a fleet of small applications. Because it is open-source, engineering teams are empowered to host Mothership wherever they choose. At the same time, an intuitive command line interface makes setting up your own Mothership as simple as typing mothership setup.
+
+
+
+Read more information about Mothership
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+ 8
+Jan
+2020
+
+
+
+Capstone Project Presentation: RedPoint
+Presented by Ben Harvey, William Robert Mills, and Charles Ging
+
+RedPoint is a web-native computational notebook that is optimized for student programmers. Computational notebooks are cell-based programming environments that allow the mixing of styled text cells with runnable code cells. RedPoint notebooks can execute Javascript, Ruby and Python code simultaneously, displaying output, return values and errors. RedPoint can also interact with APIs and webhooks, receiving JSON data directly into a notebook.
+
+
+
+Read more information about RedPoint
+
+
+Watch the video recording here
+
+
+
+
+
+
+
+
+14
+Dec
+2018
+
+
+
+Capstone Project Presentation: SpaceCraft 
+Presented by Ying Chyi Gooi, Nick Johnson, and Julius Zerwick
+
+SpaceCraft is an open-source, real-time, collaborative REPL (Read-Eval-Print-Loop) that allows users to write and execute code in the browser for Ruby, JavaScript, and Python.
+
+
+
+Read more information about SpaceCraft
+
+
+Watch the video recording here
+
+
+
+
+"

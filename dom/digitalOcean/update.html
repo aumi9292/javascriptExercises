@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Learning the DOM</title>
+  </head>
+
+  <body>
+    <h1>Document Object Model</h1>
+
+    <ul>
+      <li>Buy groceries</li>
+      <li>Feed the cat</li>
+      <li>Do laundry</li>
+    </ul>
+  </body>
+
+  <script>
+    const par = document.createElement('p');
+    par.textContent = 'New node thing';
+    const text = document.createTextNode('I\'m a new text node!')
+  </script>
+
+</html>

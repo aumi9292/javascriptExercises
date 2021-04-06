@@ -1,0 +1,30 @@
+<script>
+  let counter = 0;
+
+  let request = new XMLHttpRequest();
+  request.addEventListener('readystatechange', event => {
+    counter += 1
+    console.log(event.constructor.name)
+    console.log('state changed: ' + String(counter));
+  })
+
+ request.timeout = 1
+  request.addEventListener('timeout', event => {
+    console.log(`The ${event.target} timed out`)
+    console.log(request.status)
+  })
+
+  request.addEventListener('error', event => {
+    let req = event.target
+    console.log(`This site: ${event.constructor.name} cannot be reached`)
+  })
+  
+  request.open('GET', 'https://api.github.com/repos/rails/rails');
+  request.send();
+  request.addEventListener('load', event => {
+    let req = event.target;
+    console.log(req === request)
+    console.log(req.response)
+    console.log(req.status)
+  })
+</script>

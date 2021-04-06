@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tree Slicing</title>
+  </head>
+  <body>
+    <article id="1">1
+      <header id="2">2
+        <span id="3">3
+          <a href="#" id="4">4</a>
+        </span>
+      </header>
+      <main id="5">5
+        <section id="6">6
+          <p id="7">7
+            <span id="8">8
+              <strong id="9">9
+                <a href="#" id="10">10</a>
+              </strong>
+            </span>
+          </p>
+        </section>
+        <section id="11">11
+          <p id="12">12
+            <span id="13">13
+              <strong id="14">14
+                <a href="#" id="15">15</a>
+              </strong>
+            </span>
+          </p>
+          <p id="16">16
+            <span id="17">17
+              <strong id="18">18
+                <a href="#" id="19">19</a>
+              </strong>
+            </span>
+            <span id="20">20
+              <strong id="21">21
+                <a href="#" id="22">22</a>
+              </strong>
+            </span>
+          </p>
+        </section>
+      </main>
+      <footer id="23">23
+        <p id="24">24</p>
+      </footer>
+    </article>
+    <script>
+      // Problem
+      //  Implement a function like Array.proto.slice that takes integer arguments of a starting node and an ending node and returns an array of tag names of elements that connect as siblings or children from the first arg to the second arg
+
+      // Rules
+      // Unlike slice, ending is included in return array
+      // endId does not have to be at the end of a chain
+      // Only element nodes should be considered (use .children, etc.)
+      // Only elements that have body as an ancestor are sliceable, otherwise return undefined
+      // If either id is not in the dom, return undefined
+      // If the slice is not feasible (the first node is not on the ancestor path of the second node) return undefined
+
+      // Examples
+      // sliceTree(1, 4) // ["ARTICLE", "HEADER", "SPAN", "A"]
+      // sliceTree(1, 23); ["ARTICLE", "FOOTER"]
+      // sliceTree(1, 76) // undefined 76 is not present as a node in the dom
+      // sliceTree(2, 5) // undefined no viable path, 2 is not an ancestor of 5
+
+      // Data structures
+      // input: 2 numbers, both ids of DOM elements
+      // output: array of strings that represent tag names of element nodes
+
+      // Algorithm
+      // init sliced array
+      // use the given nodes to locate the start and end nodes
+      // if either node is not found, return undefined
+      // use a loop to iterate from child node to parent node, until the body node is reached (move from child node to parentNode, then check if parentNode's children's siblings include the second argument)
+      //  when there is no longer an id of the parent node, stop iterating,
+      //    If the node that has an id of the first passed in argument is not found, return undefined
+      //  Iterate up from the given child node, unshift the child node into sliced array
+      
+      function walk(node, cb) {
+        cb(node);
+        for (let idx = 0; idx < node.children.length; idx++) {
+          walk(node.children[idx], cb)
+        }
+      }
+      
+      function sliceTree(oldId, youngId) {
+        let old = document.getElementById(`${oldId}`);
+        let young = document.getElementById(`${youngId}`);
+        if ([old, young].includes(null)) return undefined;
+
+        let sliced = [];
+
+        walk(old, (node) => {
+          if (node.contains(young)) sliced.push(node);
+        })
+
+        return sliced.length > 0 ? sliced : undefined;
+      }
+
+      console.log(sliceTree(1, 4)); // ["ARTICLE", "HEADER", "SPAN", "A"]
+      console.log(sliceTree(1, 23)); // ["ARTICLE", "FOOTER"]
+      console.log(sliceTree(1, 76)); // undefined 76 is not present as a node in the dom
+      console.log(sliceTree(2, 5)); // undefined no viable path, 2 is not an ancestor of 5
+
+    </script>
+  </body>
+</html>

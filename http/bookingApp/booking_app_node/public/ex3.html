@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/staff_members" method="post">
+    <fieldset>
+      <label for="email">Email: </label>
+      <input type="text" name="email">
+      <label for="name">Name:</label>
+      <input type="text" name="name">
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <script>
+    function invalidName(name) {
+      name = name.replace(/[^a-z]/gi, '')
+      return name.trim().length === 0;
+    }
+
+    function invalidEmail(email) {
+      return !email.match(/[a-z]+@[a-z]/gi) || email.trim().length === 0;
+    }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      let nameField = document.querySelector("input[name='name']");
+      let emailField = document.querySelector("input[name='email']");
+
+      let form = document.querySelector("form");
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        let name = nameField.value;
+        let email = emailField.value;
+
+        if (invalidName(name) || invalidEmail(email)) {
+          alert("Staff can't be created. Check inputs.")
+        }
+
+        let data = JSON.stringify({name: name, email: email})
+
+        fetch("http://localhost:3000/api/staff_members", {
+          method: "POST",
+          headers: {
+            "Content-Type": 'application/json'
+          },
+          body: data,
+        }).then((resp) => {
+          if (!resp.ok) {
+            alert(`ERROR: ${resp.statusText}`)
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

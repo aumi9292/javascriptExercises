@@ -1,0 +1,12 @@
+<script>
+  let request = new XMLHttpRequest();
+  request.open('POST', 'https://ls-230-web-store-demo.herokuapp.com/v1/products');
+  request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+  request.setRequestHeader('Authorization', 'token AUTH_TOKEN');
+  let book = { name: 'BLAbloo', sku: '100glb', price: 10000 };
+  let json = JSON.stringify(book);
+  request.addEventListener('load', () => {
+    console.log(`${json} has successfully been added`);
+  })
+  request.send(json);
+</script>
